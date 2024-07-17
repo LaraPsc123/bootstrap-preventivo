@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid navbar-dark bg-dark py-1">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-1">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">Bool Factory</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,33 +36,74 @@
             </div>
         </nav>
     </header>
-    <!-- SELECT FORM-->
-    <select>
-        <div class="container">
-            <!-- RICHIESTA PREVENTIVO-->
-            <h1>Richiesta preventivo</h1>
-            <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
-        </div>
+    <!-- SECTION FORM-->
+
+    <div class="container mt-3">
+        <!-- RICHIESTA PREVENTIVO-->
+        <h3>Richiesta preventivo</h3>
+        <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
+    </div>
+    <form>
         <div class="container">
             <div class="row ">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="email" class="form-control" id="nome" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label for="cognome" class="form-label">Cognome</label>
+                    <input type="password" class="form-control" id="cognome">
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <div class="mb-3 py-1">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="password" class="form-control" id="email">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <select class="form-select" label for="Seleziona il tipo di lavoro">
+                    <option selected>Seleziona il tipo di lavoro</option>
+                    <option value="1">sviluppo backend</option>
+                    <option value="2">sviluppo frontend</option>
+                    <option value="3">analisi progettuale</option>
+                </select>
+                <div class="mb-3 mt-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Text area con Bootstrap 5</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="codice-promozionale" class="form-label">Codice promozionale (opzionale)</label>
+                    <input type="password" class="form-control" id="codice-promozionale">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="accetto-privacy">
+                    <label class="form-check-label" for="accetto-privacy">
+                        Accetto la Privacy Policy
+                    </label>
+                </div>
+                <div>
+                    <button class="btn btn-primary mt-5" type="submit">Button</button>
+                </div>
 
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">I nostri contatti</h5>
+                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">help@boolfactory.test</li>
+                        <li class="list-group-item">+1122334455</li>
+                        <li class="list-group-item">Help desk</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
             </div>
+
         </div>
-    </select>
+        </div>
+    </form>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

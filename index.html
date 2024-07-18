@@ -20,7 +20,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#" tabindex="-1"
                                 aria-disabled="true">Home</a>
@@ -43,50 +43,68 @@
         <h3>Richiesta preventivo</h3>
         <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
     </div>
-    <form>
-        <div class="container">
-            <div class="row ">
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="email" class="form-control" id="nome" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="cognome" class="form-label">Cognome</label>
-                    <input type="password" class="form-control" id="cognome">
-                </div>
-                <div class="mb-3 py-1">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="password" class="form-control" id="email">
-                </div>
-                <select class="form-select" label for="Seleziona il tipo di lavoro">
-                    <option selected>Seleziona il tipo di lavoro</option>
-                    <option value="1">sviluppo backend</option>
-                    <option value="2">sviluppo frontend</option>
-                    <option value="3">analisi progettuale</option>
-                </select>
-                <div class="mb-3 mt-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Text area con Bootstrap 5</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="codice-promozionale" class="form-label">Codice promozionale (opzionale)</label>
-                    <input type="password" class="form-control" id="codice-promozionale">
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="accetto-privacy">
-                    <label class="form-check-label" for="accetto-privacy">
-                        Accetto la Privacy Policy
-                    </label>
-                </div>
-                <div>
-                    <button class="btn btn-primary mt-5" type="submit">Button</button>
-                </div>
+    <!-- SEZIONE FORM -->
+    <section>
+        <form>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">I nostri contatti</h5>
-                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+            <div class="container">
+                <div class="row ">
+                    <div class="column">
+                        <div class="mb-3 col-md-6">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="email" class="form-control" id="nome" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="cognome" class="form-label">Cognome</label>
+                            <input type="password" class="form-control" id="cognome">
+                        </div>
+                        <div class="mb-3 py-1 col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="password" class="form-control" id="email">
+                        </div>
+                        <select class="form-select" label for="Seleziona il tipo di lavoro">
+                            <option selected>Seleziona il tipo di lavoro</option>
+                            <option value="1">sviluppo backend</option>
+                            <option value="2">sviluppo frontend</option>
+                            <option value="3">analisi progettuale</option>
+                        </select>
+                        <div class="mb-3 mt-3 col-md-6">
+                            <label for="exampleFormControlTextarea1" class="form-label">Text area con Bootstrap
+                                5</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="codice-promozionale" class="form-label">Codice promozionale (opzionale)</label>
+                            <input type="password" class="form-control" id="codice-promozionale">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="accetto-privacy">
+                            <label class="form-check-label" for="accetto-privacy">
+                                Accetto la Privacy Policy
+                            </label>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary mt-5" type="submit">Button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">help@boolfactory.test</li>
@@ -99,10 +117,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        </div>
-    </form>
+    </section>
 
 
 

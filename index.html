@@ -49,18 +49,20 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-4">
                         <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
-                        <form id="form">
+                        <form id="form" action="" method="POST">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>
-                                <input type="email" class="form-control" id="nome" aria-describedby="emailHelp">
+                                <input type="nome" class="form-control " id="nome" aria-describedby="emailHelp">
+
                             </div>
                             <div class="mb-3">
                                 <label for="cognome" class="form-label">Cognome</label>
-                                <input type="password" class="form-control" id="cognome">
+                                <input type="cognome" class="form-control" id="cognome">
                             </div>
                             <div class="mb-3 py-1">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="password" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email">
+
                             </div>
                             <select class="form-select" label for="Seleziona il tipo di lavoro">
                                 <option selected>Seleziona il tipo di lavoro</option>
@@ -77,6 +79,10 @@
                                 <label for="codice-promozionale" class="form-label">Codice promozionale
                                     (opzionale)</label>
                                 <input type="password" class="form-control" id="codice-promozionale">
+                                <div class="valid-feedback">Il campo è valido
+                                </div>
+                                <div class="invalid-feedback">Il campo non è valido
+                                </div>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="accetto-privacy">

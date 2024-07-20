@@ -64,7 +64,10 @@
                                 <input type="email" class="form-control" id="email">
 
                             </div>
-                            <select class="form-select" label for="Seleziona il tipo di lavoro">
+                            <div>
+                                <label for="tipo-lavoro" class="job">Tipo di lavoro</label>
+                            </div>
+                            <select id="job" class="form-select" label for="Seleziona il tipo di lavoro">
                                 <option selected>Seleziona il tipo di lavoro</option>
                                 <option value="1">sviluppo backend</option>
                                 <option value="2">sviluppo frontend</option>
@@ -91,7 +94,8 @@
                                 </label>
                             </div>
                             <div>
-                                <button class="btn btn-primary mt-5" type="submit">Button</button>
+                                <button id="calcola" class="btn btn-primary mt-5" type="submit">Calcola
+                                    preventivo</button>
                             </div>
                         </form>
                     </div>

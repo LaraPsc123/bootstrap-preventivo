@@ -36,23 +36,32 @@ formElement.addEventListener('submit', function (event) {
     // RECUPERARE IL VALORE DELLA SELECT
     const selectLavoro = selectLavoroElement.value
     console.log(selectLavoro)
+
+    // AMMONTARE DEL PREVENTIVO PER LE ORE DI LAVORO RICHIESTE
+    // PREZZO BASE : NUM. ORE PER PREZZO ORARIO
+    const oreLavoro = 10 // number
+    const prezzoOrarioBackend = 20.50 // number
+    const prezzoOrarioFrontend = 15.30 // number
+    const prezzoOrarioProgettuale = 33.60 // number
+
+    // CALCOLO
+    let prezzoBaseBackend = oreLavoro * prezzoOrarioBackend
+    prezzoBaseBackend.innerHTML = prezzoBaseBackend.toFixed(2)
+    let prezzoBaseFrontend = oreLavoro * prezzoOrarioFrontend
+    prezzoBaseFrontend.innerHTML = prezzoBaseFrontend.toFixed(2)
+    let prezzoBaseProgettuale = oreLavoro * prezzoOrarioProgettuale
+    prezzoBaseProgettuale.innerHTML = prezzoBaseProgettuale.toFixed(2)
+    console.log(prezzoBaseBackend, prezzoBaseFrontend, prezzoBaseProgettuale)
+
+
 })
 
 
 
 
-// AMMONTARE DEL PREVENTIVO PER LE ORE DI LAVORO RICHIESTE
-// PREZZO FINALE: NUM. ORE PER PREZZO ORARIO
-// const oreLavoro = 10 // number
-// const prezzoOrarioBackend = 20.50 // number
-// const prezzoOrarioFrontend = 15.30 // number
-// const prezzoOrarioProgettuale = 33.60 // number
 
-// // CALCOLO
-// let prezzoFinaleBackend = oreLavoro * prezzoOrarioBackend
-// let prezzoFinaleFrontend = oreLavoro * prezzoOrarioFrontend
-// let prezzoFinaleProgettuale = oreLavoro * prezzoOrarioProgettuale
-// console.log(prezzoFinaleBackend, prezzoFinaleFrontend, prezzoFinaleProgettuale)
+
+
 
 
 

@@ -83,6 +83,13 @@ formElement.addEventListener('submit', function (event) {
         sconto = prezzoBaseFrontend * 0.25
         let prezzoFinaleFrontend = prezzoBaseFrontend - sconto
         priceElement.innerHTML = prezzoFinaleFrontend + "\u20AC"
+    } else if (codiciSconto.includes(codice) && selectLavoro == "3") {
+        codicePromElement.classList.add("is-valid")
+        sconto = prezzoBaseProgettuale * 0.25
+        let prezzoFinaleProgettuale = prezzoBaseProgettuale - sconto
+        priceElement.innerHTML = prezzoFinaleProgettuale + "\u20AC"
+    } else if (!codiciSconto.includes(codice)) {
+        codicePromElement.classList.add("is-invalid")
     }
 
 })

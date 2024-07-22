@@ -46,11 +46,11 @@ formElement.addEventListener('submit', function (event) {
 
     // CALCOLO
     let prezzoBaseBackend = oreLavoro * prezzoOrarioBackend
-    prezzoBaseBackend.innerHTML = prezzoBaseBackend.toFixed(2)
+    prezzoBaseBackend.toFixed(2)
     let prezzoBaseFrontend = oreLavoro * prezzoOrarioFrontend
-    prezzoBaseFrontend.innerHTML = prezzoBaseFrontend.toFixed(2)
+    prezzoBaseFrontend.toFixed(2)
     let prezzoBaseProgettuale = oreLavoro * prezzoOrarioProgettuale
-    prezzoBaseProgettuale.innerHTML = prezzoBaseProgettuale.toFixed(2)
+    prezzoBaseProgettuale.toFixed(2)
     console.log(prezzoBaseBackend, prezzoBaseFrontend, prezzoBaseProgettuale)
 
 

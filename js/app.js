@@ -18,6 +18,8 @@ const cognomeElement = document.getElementById('cognome')
 const emailInputElement = document.getElementById('email')
 const tipoLavoroElement = document.getElementById("tipo-lavoro")
 const selectLavoroElement = document.getElementById("job")
+const codicePromElement = document.getElementById("codice-promozionale")
+const priceElement = document.getElementById("finalprice")
 console.log(nomeElement, cognomeElement, emailInputElement, tipoLavoroElement)
 
 // EVITARE L'EVENTO INVIO
@@ -54,11 +56,34 @@ formElement.addEventListener('submit', function (event) {
     // console.log(prezzoBaseBackend, prezzoBaseFrontend, prezzoBaseProgettuale)
 
     // SE seleziona sviluppo backend
-    if (selectLavoro == prezzoBaseBackend) {
-        console.log(prezzoBaseBackend)
+    if (selectLavoro == "") {
+        selectLavoroElement.classList.add("is-invalid")
+    } else if (selectLavoro == "1") {
+        priceElement.innerHTML = prezzoBaseBackend + "\u20AC"
+    } else if (selectLavoro == "2") {
+        priceElement.innerHTML = prezzoBaseFrontend + "\u20AC"
+    } else if (selectLavoro == "3") {
+        priceElement.innerHTML = prezzoBaseProgettuale + "\u20AC"
     }
 
+    const codiciSconto = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
+    let codice = codicePromElement.value
+    // dichiaro la variabile sconto
+    let sconto = 0
 
+    // SE il codice sconto è valido
+    // -- allora devo calcolare lo sconto
+    if (codiciSconto.includes(codice) && selectLavoro == "1") {
+        codicePromElement.classList.add("is-valid")
+        sconto = prezzoBaseBackend * 0.25
+        let prezzoFinaleBackend = prezzoBaseBackend - sconto
+        priceElement.innerHTML = prezzoFinaleBackend + "\u20AC"
+    } else if (codiciSconto.includes(codice) && selectLavoro == "2") {
+        codicePromElement.classList.add("is-valid")
+        sconto = prezzoBaseFrontend * 0.25
+        let prezzoFinaleFrontend = prezzoBaseFrontend - sconto
+        priceElement.innerHTML = prezzoFinaleFrontend + "\u20AC"
+    }
 
 })
 

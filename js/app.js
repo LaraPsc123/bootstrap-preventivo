@@ -46,12 +46,15 @@ formElement.addEventListener('submit', function (event) {
 
     // CALCOLO
     let prezzoBaseBackend = oreLavoro * prezzoOrarioBackend
-    prezzoBaseBackend.toFixed(2)
+    prezzoBaseBackend = prezzoBaseBackend.toFixed(2)
     let prezzoBaseFrontend = oreLavoro * prezzoOrarioFrontend
-    prezzoBaseFrontend.toFixed(2)
+    prezzoBaseFrontend = prezzoBaseFrontend.toFixed(2)
     let prezzoBaseProgettuale = oreLavoro * prezzoOrarioProgettuale
-    prezzoBaseProgettuale.toFixed(2)
+    prezzoBaseProgettuale = prezzoBaseProgettuale.toFixed(2)
     console.log(prezzoBaseBackend, prezzoBaseFrontend, prezzoBaseProgettuale)
+
+    // DICHIARO VARIABILI CODICI SCONTO
+
 
 
 })

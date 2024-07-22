@@ -24,19 +24,21 @@ console.log(nomeElement, cognomeElement, emailInputElement, tipoLavoroElement)
 formElement.addEventListener('submit', function (event) {
     event.preventDefault()
     console.log('submit', event)
+
+    // RECUPERARE DALL'INPUT IL VALORE DEL NOME
+    const nome = nomeElement.value
+    console.log(nome)
+
+    // RECUPERARE DALL'INPUT IL VALORE DEL COGNOME
+    const cognome = cognomeElement.value
+    console.log(cognome)
+
+    // RECUPERARE IL VALORE DELLA SELECT
+    const selectLavoro = selectLavoroElement.value
+    console.log(selectLavoro)
 })
 
-// RECUPERARE DALL'INPUT IL VALORE DEL NOME
-const nome = nomeElement.value
-console.log(nome)
 
-// RECUPERARE DALL'INPUT IL VALORE DEL COGNOME
-const cognome = cognomeElement.value
-console.log(cognome)
-
-// RECUPERARE IL VALORE DELLA SELECT
-const selectLavoro = selectLavoroElement.value
-console.log(selectLavoro)
 
 
 // AMMONTARE DEL PREVENTIVO PER LE ORE DI LAVORO RICHIESTE

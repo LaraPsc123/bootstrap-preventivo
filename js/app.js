@@ -51,9 +51,12 @@ formElement.addEventListener('submit', function (event) {
     prezzoBaseFrontend = prezzoBaseFrontend.toFixed(2)
     let prezzoBaseProgettuale = oreLavoro * prezzoOrarioProgettuale
     prezzoBaseProgettuale = prezzoBaseProgettuale.toFixed(2)
-    console.log(prezzoBaseBackend, prezzoBaseFrontend, prezzoBaseProgettuale)
+    // console.log(prezzoBaseBackend, prezzoBaseFrontend, prezzoBaseProgettuale)
 
-    // DICHIARO VARIABILI CODICI SCONTO
+    // SE seleziona sviluppo backend
+    if (selectLavoro == prezzoBaseBackend) {
+        console.log(prezzoBaseBackend)
+    }
 
 
 
